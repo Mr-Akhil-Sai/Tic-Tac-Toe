@@ -3,3 +3,26 @@
     padding: 0;
     box-sizing: border-box;
 }
+section{
+    height: 302px;
+    width: 302px;
+    display: grid;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    border: 1px solid red;
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) ;
+}
+h1, h3{
+    display: flex;
+    justify-content: center;
+}
+button{
+    height: 90px;
+    width: 90px;
+    border: none;
+    border-radius: 50%;
+    background-color: goldenrod;
+}
