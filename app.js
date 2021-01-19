@@ -266,4 +266,3 @@ function winning(){
 function reset(block){
     location.reload();
 }
-
