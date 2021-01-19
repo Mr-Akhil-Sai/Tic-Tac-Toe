@@ -1,5 +1,10 @@
 let flag = 1;
 let block = document.querySelectorAll(".block");
+let playerTurn = document.querySelector("#playerTurn");
+
+
+// This is each player turn
+
 
 document.querySelectorAll(".block").forEach((el, index)=>
 { 
@@ -9,23 +14,29 @@ document.querySelectorAll(".block").forEach((el, index)=>
            el.innerHTML = "X";
            el.style.pointerEvents = "none";
            flag = 0;
+           playerTurn.innerHTML = 'player "O" turn';
         }
         else{
             el.innerHTML = "O";
             el.style.pointerEvents = "none"; 
+            playerTurn.innerHTML = 'player "X" turn';
             flag = 1;   
         }
         winning(block);
     })
 });
 
+
 //winning logic for 'X'
+
+
 let update = document.querySelector("#update");
 let indexes = [0, 1, 2, 3, 4, 5, 6, 7, 8];
 
 function winning(){
     if(block[0].innerHTML == "X" && block[1].innerHTML == "X" && block[2].innerHTML == "X"){
-        update.innerHTML = "player X won" 
+        update.innerHTML = 'Player "X" won'
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -37,7 +48,8 @@ function winning(){
         block[8].style.pointerEvents = "none";
     }
     else if(block[0].innerHTML == "X" && block[4].innerHTML == "X" && block[8].innerHTML == "X"){
-        update.innerHTML = "player X won"
+        update.innerHTML = 'Player "X" won'
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -49,7 +61,8 @@ function winning(){
         block[8].style.pointerEvents = "none";
     }
     else if(block[0].innerHTML == "X" && block[3].innerHTML == "X" && block[6].innerHTML == "X"){
-        update.innerHTML = "player X won"
+        update.innerHTML = 'Player "X" won'
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -61,7 +74,8 @@ function winning(){
         block[8].style.pointerEvents = "none";
     }
     else if(block[2].innerHTML == "X" && block[4].innerHTML == "X" && block[6].innerHTML == "X"){
-        update.innerHTML = "player X won"
+        update.innerHTML = 'Player "X" won'
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -73,7 +87,8 @@ function winning(){
         block[8].style.pointerEvents = "none";
     }
     else if(block[3].innerHTML == "X" && block[4].innerHTML == "X" && block[5].innerHTML == "X"){
-        update.innerHTML = "player X won"
+        update.innerHTML = 'Player "X" won'
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -85,7 +100,8 @@ function winning(){
         block[8].style.pointerEvents = "none";
     }
     else if(block[6].innerHTML == "X" && block[7].innerHTML == "X" && block[8].innerHTML == "X"){
-        update.innerHTML = "player X won"
+        update.innerHTML = 'Player "X" won'
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -97,7 +113,8 @@ function winning(){
         block[8].style.pointerEvents = "none";
     }
     else if(block[1].innerHTML == "X" && block[4].innerHTML == "X" && block[7].innerHTML == "X"){
-        update.innerHTML = "player X won";
+        update.innerHTML = 'Player "X" won'
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -109,7 +126,8 @@ function winning(){
         block[8].style.pointerEvents = "none";
     }
     else if(block[2].innerHTML == "X" && block[5].innerHTML == "X" && block[8].innerHTML == "X"){
-        update.innerHTML = "player X won";
+        update.innerHTML = 'Player "X" won'
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -123,8 +141,11 @@ function winning(){
 
 
     //winning logic for 'O'
+
+
     else if(block[0].innerHTML == "O" && block[1].innerHTML == "O" && block[2].innerHTML == "O"){
-        update.innerHTML = "player O won"; 
+        update.innerHTML = 'Player "O" won' 
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -136,7 +157,8 @@ function winning(){
         block[8].style.pointerEvents = "none";
     }
     else if(block[0].innerHTML == "O" && block[4].innerHTML == "O" && block[8].innerHTML == "O"){
-        update.innerHTML = "player O won"; 
+        update.innerHTML = 'Player "O" won'
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -148,7 +170,8 @@ function winning(){
         block[8].style.pointerEvents = "none";
     }
     else if(block[0].innerHTML == "O" && block[3].innerHTML == "O" && block[6].innerHTML == "O"){
-        update.innerHTML = "player O won";
+        update.innerHTML = 'Player "O" won'
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -160,7 +183,8 @@ function winning(){
         block[8].style.pointerEvents = "none";
     }
     else if(block[2].innerHTML == "O" && block[4].innerHTML == "O" && block[6].innerHTML == "O"){
-        update.innerHTML = "player O won";
+        update.innerHTML = 'Player "O" won'
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -172,7 +196,8 @@ function winning(){
         block[8].style.pointerEvents = "none";
     }
     else if(block[3].innerHTML == "O" && block[4].innerHTML == "O" && block[5].innerHTML == "O"){
-        update.innerHTML = "player O won";
+        update.innerHTML = 'Player "O" won'
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -184,7 +209,8 @@ function winning(){
         block[8].style.pointerEvents = "none";
     }
     else if(block[6].innerHTML == "O" && block[7].innerHTML == "O" && block[8].innerHTML == "O"){
-        update.innerHTML = "player O won";
+        update.innerHTML = 'Player "O" won'
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -196,7 +222,8 @@ function winning(){
         block[8].style.pointerEvents = "none";
     }
     else if(block[1].innerHTML == "O" && block[4].innerHTML == "O" && block[7].innerHTML == "O"){
-        update.innerHTML = "player O won";
+        update.innerHTML = 'Player "O" won'
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -208,7 +235,8 @@ function winning(){
         block[8].style.pointerEvents = "none";
     }
     else if(block[2].innerHTML == "O" && block[5].innerHTML == "O" && block[8].innerHTML == "O"){
-        update.innerHTML = "player O won";
+        update.innerHTML = 'Player "O" won'
+        playerTurn.innerHTML = '';
         block[0].style.pointerEvents = "none"; 
         block[1].style.pointerEvents = "none"; 
         block[2].style.pointerEvents = "none"; 
@@ -219,6 +247,23 @@ function winning(){
         block[7].style.pointerEvents = "none"; 
         block[8].style.pointerEvents = "none";
     }
+
+
+    //This is restart statement logic
+
+/*
+    else if(block[0].innerHTML == "X" || block[0].innerHTML == "O" && block[1].innerHTML == "X" || 
+    block[1].innerHTML == "O" && block[2].innerHTML == "X" || block[2].innerHTML == "O" ||
+    block[3].innerHTML == "X" || block[3].innerHTML == "O" && block[4].innerHTML == "X" || 
+    block[4].innerHTML == "O" && block[5].innerHTML == "X" || block[5].innerHTML == "O" &&
+    block[6].innerHTML == "X" || block[6].innerHTML == "O" && block[7].innerHTML == "X" ||
+    block[7].innerHTML == "O" && block[8].innerHTML == "X" && block[8].innerHTML == "O"){
+        update.innerHTML = "Please restart the game";
+    }
+    */
 }
-update.style.display = "Flex";
+
+function reset(block){
+    location.reload();
+}
 
