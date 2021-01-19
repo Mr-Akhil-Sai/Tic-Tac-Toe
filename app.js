@@ -220,5 +220,5 @@ function winning(){
         block[8].style.pointerEvents = "none";
     }
 }
-update.style.display = "Flex";
+
 
