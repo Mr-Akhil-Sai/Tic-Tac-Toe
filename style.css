@@ -5,8 +5,6 @@
     box-sizing: border-box;
 }
 section{
-    height: 302px;
-    width: 302px;
     display: grid;
     position: absolute;
     left: 50%;
@@ -25,14 +23,13 @@ p{
     justify-content: center;
 }
 .block{
+    height: 100px;
+    width: 100px;
     border : 1px solid black;
     display: flex;
     justify-content: center;
     align-content: center;
     align-items: center;
-}
-.block:hover{
-    text:"X";
 }
 #update{
     position: absolute;
