@@ -157,6 +157,12 @@ function winning(){
 
 
     //This is restart statement logic
-
+    else if(block[0].innerHTML != "" && block[1].innerHTML != "" && block[2].innerHTML != "" &&
+    block[3].innerHTML != "" && block[4].innerHTML != "" && block[5].innerHTML != "" && 
+    block[6].innerHTML != "" &&  block[7].innerHTML != "" && block[8].innerHTML != ""){
+        update.style.color = "red";
+        update.innerHTML = "Draw, please restart the game";
+        playerTurn.innerHTML = '';
+    }
  
 }
