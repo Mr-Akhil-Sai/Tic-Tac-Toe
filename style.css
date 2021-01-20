@@ -31,6 +31,9 @@ p{
     align-content: center;
     align-items: center;
 }
+.block:hover{
+    text:"X";
+}
 #update{
     position: absolute;
     left: 50%;
